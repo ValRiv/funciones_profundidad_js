@@ -23,13 +23,18 @@ boton.addEventListener("mouseout", function() {
     boton.className = "btnOut";
 });
 
+document.addEventListener('click',()=>console.log('Click'));
+
 console.log("Declaración de función una función común");
 function nombreCompleto(nombre, apellido) {
     const completo = nombre + "_" + apellido;
     return completo;
  }
-
 console.log(nombreCompleto("Max", "Power"));
+const nombreFlecha = (nombre,apellido) => nombre + apellido;
+nombreCompleto = nombreFlecha("Max","Power");
+console.log(nombreCompleto);
+
 
 console.log("Declaración de función anónima");
 const iniciales = function (nombre, apellido) {
@@ -49,3 +54,9 @@ sino que debe utilizarse como variable global.
 */
 
 const colores = ["azul", "verde", "amarillo", "rojo"];
+
+const funcionBucle = () => {for (const color of colores) {
+   console.log(colores);
+};
+}
+console.log(colores);
