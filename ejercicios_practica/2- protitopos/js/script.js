@@ -60,11 +60,15 @@ function Post(titulo, avatar, texto) {
   this.titulo = titulo;
   this.avatar = avatar;
   this.texto = texto;
+
   this.prototipo = () => {
+
     console.log(`"this" dentro de la función flecha dentro del
     prototipo: ${this}`);
-    return this.titulo + " " + this.avatar + " " + this.texto + " ";
+      return this.titulo + " " + this.avatar + " " + this.texto + " ";
+    
   }
+  
 }
 
 
@@ -75,16 +79,12 @@ function Post(titulo, avatar, texto) {
 --> Genere un objeto del prototipo con los datos del objeto de esa iteración
 --> Almacene el objeto generado dentro de una lista "posts"*/
 
-function Post(titulo, avatar, texto){
-  this.titulo= titulo;
-  this.avatar= avatar;
-  this.texto= texto;
-}
-
+const posts=[]
 const postNuevo = new Post("titulo", "avatar", "texto");
 
-for (const posts of data){
-  console.log(posts);
+for (const p of data){
+  posts.push(p)
+  console.log(posts)
+  
 }
-
 
